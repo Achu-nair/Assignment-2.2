@@ -7,12 +7,12 @@ answer:
         #load library
         library(rjson)
         #create list
-        fname<-- list.files("path of files",pattern= "*.json", full.names=TRUE)
+        fname<-- list.files("C:\\Aswathi\\RProgram\\MyWork",pattern= "*.json", full.names=TRUE)
         myjson <-- lapply(fname, function(x) fromJSON(file = x))
   
 2. parsing json into dtaframe.
 
-        temp <- list.files(path, pattern="*.json", full.names=TRUE)
+        temp <- list.files(C:\\Aswathi\\RProgram\\MyWork, pattern="*.json", full.names=TRUE)
         movies <- purrr::map_df(temp, function(x) { 
         purrr::map(jsonlite::fromJSON(x), function(y) ifelse(is.null(y), NA, y)) 
         })
